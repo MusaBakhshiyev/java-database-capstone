@@ -228,3 +228,128 @@
 
 ---
 
+**Doctor User Stories** 
+
+---
+
+### **User Story 1**
+
+**Title:**
+*As a doctor, I want to log into the portal to manage my appointments, so that I can keep track of my schedule.*
+
+**Acceptance Criteria:**
+
+1. Doctor can access a secure login page.
+2. On entering valid credentials, doctor is redirected to their dashboard.
+3. Login is protected with JWT authentication.
+
+**Priority:** High
+**Story Points:** 3
+**Notes:**
+
+* Token should be securely stored.
+* Dashboard should only load after successful authentication.
+
+---
+
+### **User Story 2**
+
+**Title:**
+*As a doctor, I want to log out of the portal, so that I can protect my data.*
+
+**Acceptance Criteria:**
+
+1. A "Logout" option is visible on all dashboard pages.
+2. Clicking "Logout" removes the session/token and redirects to the login page.
+3. No dashboard access is allowed after logout.
+
+**Priority:** High
+**Story Points:** 2
+**Notes:**
+
+* Must clear JWT token or session data on logout.
+* Should invalidate access to protected routes.
+
+---
+
+### **User Story 3**
+
+**Title:**
+*As a doctor, I want to view my appointment calendar, so that I can stay organized.*
+
+**Acceptance Criteria:**
+
+1. Doctor can see a calendar view on their dashboard.
+2. Each appointment is displayed with patient name, time, and duration.
+3. The calendar can be filtered by day, week, or month.
+
+**Priority:** High
+**Story Points:** 5
+**Notes:**
+
+* Use a frontend calendar component for visualization.
+* Optional: integrate with Google Calendar.
+
+---
+
+### **User Story 4**
+
+**Title:**
+*As a doctor, I want to mark my unavailability, so that patients can only see available time slots.*
+
+**Acceptance Criteria:**
+
+1. Doctor can add blocked time ranges (e.g., vacation, meetings).
+2. Unavailable times are hidden from patient booking page.
+3. Existing appointments are not affected.
+
+**Priority:** Medium
+**Story Points:** 5
+**Notes:**
+
+* Doctor should not be able to block a time slot with existing appointments.
+* Allow recurring unavailability (e.g., every Friday afternoon).
+
+---
+
+### **User Story 5**
+
+**Title:**
+*As a doctor, I want to update my profile with specialization and contact information, so that patients have up-to-date information.*
+
+**Acceptance Criteria:**
+
+1. Doctor can access a profile update form.
+2. Changes are validated and saved to the database.
+3. Updated info is reflected on the patient-facing doctor list.
+
+**Priority:** Medium
+**Story Points:** 3
+**Notes:**
+
+* Include fields like phone, email, specialization, bio.
+* Add optional profile picture upload.
+
+---
+
+### **User Story 6**
+
+**Title:**
+*As a doctor, I want to view the patient details for upcoming appointments, so that I can be prepared.*
+
+**Acceptance Criteria:**
+
+1. Each appointment entry links to basic patient information.
+2. Includes patient name, age, contact, and recent medical history.
+3. Access is restricted to only appointments assigned to the doctor.
+
+**Priority:** High
+**Story Points:** 4
+**Notes:**
+
+* Ensure patient privacy is maintained (only accessible by assigned doctor).
+* Could be expanded to include downloadable reports in future.
+
+---
+
+
